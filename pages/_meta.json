@@ -1,3 +1,8 @@
 {
+  "index": {
+    "title": "Introduction",
+    "type": "page",
+    "display": "hidden"
+  },
   "ronin-modal": "Ronin Wallet Modal"
 }
