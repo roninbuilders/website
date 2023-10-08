@@ -1,6 +1,15 @@
-export default {
-  logo: <span>Ronin Builders</span>,
+import Image from "next/image"
 
+export default {
+  logo: (
+    <>
+      <Image src="/Ronin_Mark_Blue.svg" alt="" width={18} height={25} style={{ marginRight: "10px" }} />
+      <p style={{
+        fontWeight: 700,
+        color: "#2662d9"
+      }}>Main</p>
+    </>
+  ),
   project: {
     link: 'https://github.com/ronin-builders'
   },
