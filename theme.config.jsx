@@ -11,6 +11,7 @@ export default {
   feedback: {
     content: "Open an issue in the docs repository"
   },
+  gitTimestamp: null,
   head: (
     <>
       <title>Ronin Builders | Community</title>
@@ -19,7 +20,7 @@ export default {
       <meta property="og:image" content="/homepage-hero.png"/>
       <meta property="og:title" content="Ronin Builders" />
       {/* <meta property="og:url" content="http://" /> */}
-      <meta property="og:description" content="Typescript tools for Ronin Network. Community driven organization." />
+      <meta property="og:description" content="Typescript tools for the Ronin Network. Community driven organization." />
 
       <meta name="twitter:card" content="summary_large_image" />
     </>
