@@ -15,7 +15,7 @@ export default {
   },
   docsRepositoryBase:"https://github.com/ronin-builders/website",
   footer: {
-    text: `MIT ${new Date().getFullYear()} © Ronin Builders.`
+    component: null
   },
   feedback: {
     content: "Open an issue in the docs repository"

@@ -1,0 +1,30 @@
+# Ronin Connector for Wagmi
+
+### Install
+
+```sh npm2yarn
+npm i ronin-connector
+```
+
+### Configuration
+```ts
+import { RoninConnector, ronin } from 'ronin-connector'
+
+const connector = new RoninConnector({
+  chains:[ronin],
+  options:{
+    projectId: '...',
+    metadata:{
+      name: 'wagmi',
+      description: 'my wagmi app',
+      url: 'https://wagmi.sh',
+      icons: ['https://wagmi.sh/icon.png'],
+    },
+  }
+})
+```
+
+### Features
+- Connect to Ronin Browser Wallet.
+- If the wallet browser extension is not installed it will generate an URI string that can be used to create a QRCode for the mobile wallet app to scan.
+- Connect to mobile wallet app.
