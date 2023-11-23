@@ -1,4 +1,4 @@
-# Ronin Connector for Wagmi
+# Ronin Connector for Wagmi v1
 
 ### Install
 
