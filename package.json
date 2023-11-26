@@ -1,6 +1,7 @@
 {
 	"scripts": {
-		"dev": "next dev"
+		"dev": "next dev",
+		"build": "next build"
 	},
 	"dependencies": {
 		"@roninbuilders/modal": "^0.0.8",
