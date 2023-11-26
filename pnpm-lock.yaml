@@ -12,8 +12,8 @@ dependencies:
     specifier: ^13.5.4
     version: 13.5.4(react-dom@18.2.0)(react@18.2.0)
   nextjs-progressbar:
-    specifier: ^0.0.16
-    version: 0.0.16(next@13.5.4)(react@18.2.0)
+    specifier: 0.0.15
+    version: 0.0.15(next@13.5.4)(react@18.2.0)
   nextra:
     specifier: ^2.13.2
     version: 2.13.2(next@13.5.4)(react-dom@18.2.0)(react@18.2.0)
@@ -457,6 +457,7 @@ packages:
     dependencies:
       is-glob: 4.0.3
       micromatch: 4.0.5
+      napi-wasm: 1.1.0
     dev: false
     bundledDependencies:
       - napi-wasm
@@ -3319,6 +3320,10 @@ packages:
     hasBin: true
     dev: false
 
+  /napi-wasm@1.1.0:
+    resolution: {integrity: sha512-lHwIAJbmLSjF9VDRm9GoVOy9AGp3aIvkjv+Kvz9h16QR3uSVYH78PNQUnT2U4X53mhlnV2M7wrhibQ3GHicDmg==}
+    dev: false
+
   /next-mdx-remote@4.4.1(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-1BvyXaIou6xy3XoNF4yaMZUCb6vD2GTAa5ciOa6WoO+gAUTYsb1K4rI/HSC2ogAWLrb/7VSV52skz07vOzmqIQ==}
     engines: {node: '>=14', npm: '>=7'}
@@ -3399,8 +3404,8 @@ packages:
       - babel-plugin-macros
     dev: false
 
-  /nextjs-progressbar@0.0.16(next@13.5.4)(react@18.2.0):
-    resolution: {integrity: sha512-GV0fD38EMD3vSDCmkq+tObmoup6QA91a6a9MxGuhJZuRk/9TNsrHGnIQQQ/sggkMkXuT4fBgF6jRjFwScDT3zA==}
+  /nextjs-progressbar@0.0.15(next@13.5.4)(react@18.2.0):
+    resolution: {integrity: sha512-ZA3btbuD6y/PylGdA7U7wbpLDe9N1esYEF6nwn5SsGQA6jkZ4EmT+TcjVcpOWTMdgZqy5G/FxKIBU69yLoGSTw==}
     peerDependencies:
       next: '>= 6.0.0'
       react: '>= 16.0.0'
