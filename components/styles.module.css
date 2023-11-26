@@ -1,0 +1,34 @@
+.button{
+  margin-top: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 8px;
+  background: linear-gradient(256.28deg, #1c94f4 , #1273ea );
+  color: #fff;
+  font-weight: 600;
+  transition-duration: .2s;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  height: 40px;
+  padding: 0 20px;
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+  border: 0;
+  transition: all .2s ease;
+}
+
+.button svg{
+  margin-top: 2px;
+  padding-left: 0;
+  transition: all .2s ease;
+}
+
+.button:hover{
+  background: linear-gradient(256.28deg,#1273ea,#1c94f4);
+}
+
+.button:hover svg{
+  margin-left: 3px;
+}
