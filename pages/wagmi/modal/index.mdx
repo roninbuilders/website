@@ -1,0 +1,113 @@
+import Modal from '../../components/Modal'
+
+# Ronin Modal
+
+Ronin Modal is a framework agnostic UI library that simplifies the integration of the Ronin Wallet connection with websites.
+
+Ronin Modal supports [W3Vm](../../modal/index.mdx) and [Wagmi v2](https://beta.wagmi.sh/).
+
+**Test on Saigon:**
+<br/>
+<Modal/>
+
+## Installation
+
+```npm2yarn
+npm install @roninbuilders/modal-wagmi wagmi@beta viem@2.0.0-beta.6 @tanstack/react-query
+```
+
+## Implementation
+
+1. Import the chain you want to use, you can select Ronin mainnet or Saigon testnet.
+
+
+```tsx
+import { ronin, saigon } from 'viem/chains'
+```
+
+2. Get a free project ID from WalletConnect Cloud. This is used for mobile connection.
+
+3. Call the `createRoninModal` function on top of your application.
+
+```tsx
+import { ronin, saigon } from 'viem/chains'
+import { createRoninModal } from '@roninbuilders/modal-wagmi'
+
+const config = createRoninModal({
+  projectId:"WALLETCONNECT_PROJECT_ID",
+  chain: saigon,
+  metadata: { 
+    name: 'Example', 
+    description: 'Example website', 
+    url: 'https://example.com',
+    icons: []
+  },
+})
+```
+
+4. `createRoninModal` will return a Wagmi config object which we'll pass down to the Wagmi Provider
+
+```tsx
+import { ronin, saigon } from 'viem/chains'
+import { createRoninModal } from '@roninbuilders/modal-wagmi'
+
+const config = createRoninModal({
+  projectId:"WALLETCONNECT_PROJECT_ID",
+  chain: saigon,
+  metadata: { 
+    name: 'My Website', 
+    description: 'My Website Description', 
+    url: 'https://mywebsite.com',
+    icons: []
+  },
+})
+
+export default App(){
+	return (
+		<WagmiProvider config={config}>
+        {/*...*/}
+    </WagmiProvider>
+	)
+}
+```
+
+5. Add a React Query wrapper
+
+```tsx
+import { WagmiProvider } from 'wagmi'
+import { ronin, saigon } from 'viem/chains'
+import { createRoninModal } from '@roninbuilders/modal-wagmi'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query' 
+
+const queryClient = new QueryClient()
+
+export const config = createRoninModal({
+  projectId:"WALLETCONNECT_PROJECT_ID",
+  chain: saigon,
+  metadata: { 
+    name: 'Example', 
+    description: 'Example website', 
+    url: 'https://example.com',
+    icons: []
+  },
+})
+
+export default App(){
+	return (
+		<WagmiProvider config={config}>
+      <QueryClientProvider client={queryClient}>
+        {/*...*/}
+      </QueryClientProvider> 
+    </WagmiProvider>
+	)
+}
+```
+
+Now you can call the `<ronin-button/>` web component button anywhere in your application. This web component doesn't require importing
+and its CSS style can be overwritten.
+
+```ts
+<ronin-button/>
+```
+
+All Wagmi hooks and functions are supported. Learn more about Wagmi v2 [here](https://beta.wagmi.sh/react/api/hooks).

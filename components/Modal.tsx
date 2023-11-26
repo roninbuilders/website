@@ -1,9 +1,10 @@
-import React from 'react'
+import { saigon, createRoninModal } from "@roninbuilders/modal"
 
-type Props = {}
+createRoninModal({
+	chain: saigon,
+	projectId: "cdbd18f9f96172be74c3e351ce99b908",
+})
 
-export default function Modal({}: Props) {
-  return (
-    <div>Modal Test here</div>
-  )
+export default function Modal() {
+  return <ronin-button/>
 }
