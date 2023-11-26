@@ -1,10 +1,10 @@
-import Modal from '../../../components/Modal'
+import Modal from '../../components/Modal'
 
 # Ronin Modal
 
 Ronin Modal is a framework agnostic UI library that simplifies the integration of the Ronin Wallet connection with websites.
 
-Ronin Modal supports [W3Vm](../../modal/index.mdx) and [Wagmi v2](https://beta.wagmi.sh/).
+Ronin Modal supports [W3Vm](../w3vm/modal) and [Wagmi v2](https://beta.wagmi.sh/).
 
 **Test on Saigon:**
 <br/>
@@ -12,7 +12,7 @@ Ronin Modal supports [W3Vm](../../modal/index.mdx) and [Wagmi v2](https://beta.w
 
 ## Installation
 
-```npm2yarn
+```sh npm2yarn
 npm install @roninbuilders/modal-wagmi wagmi@beta viem@2.0.0-beta.6 @tanstack/react-query
 ```
 
@@ -25,11 +25,11 @@ npm install @roninbuilders/modal-wagmi wagmi@beta viem@2.0.0-beta.6 @tanstack/re
 import { ronin, saigon } from 'viem/chains'
 ```
 
-2. Get a free project ID from WalletConnect Cloud. This is used for mobile connection.
+2. Get a free project ID from [WalletConnect Cloud](https://cloud.walletconnect.com/). This is used for mobile connection.
 
 3. Call the `createRoninModal` function on top of your application.
 
-```tsx
+```tsx {2-13}
 import { ronin, saigon } from 'viem/chains'
 import { createRoninModal } from '@roninbuilders/modal-wagmi'
 
@@ -37,17 +37,18 @@ const config = createRoninModal({
   projectId:"WALLETCONNECT_PROJECT_ID",
   chain: saigon,
   metadata: { 
-    name: 'Example', 
-    description: 'Example website', 
-    url: 'https://example.com',
-    icons: []
+    name: 'My Website', 
+    description: 'My website description', 
+    url: 'https://mywebsite.com',
+    icons: ['https://mywebsite.com/icon']
   },
 })
 ```
 
 4. `createRoninModal` will return a Wagmi config object which we'll pass down to the Wagmi Provider
 
-```tsx
+```tsx {1, 15-21}
+import { WagmiProvider } from 'wagmi'
 import { ronin, saigon } from 'viem/chains'
 import { createRoninModal } from '@roninbuilders/modal-wagmi'
 
@@ -62,10 +63,10 @@ const config = createRoninModal({
   },
 })
 
-export default App(){
+export default function App(){
 	return (
 		<WagmiProvider config={config}>
-        {/*...*/}
+      {/*...*/}
     </WagmiProvider>
 	)
 }
@@ -73,7 +74,7 @@ export default App(){
 
 5. Add a React Query wrapper
 
-```tsx
+```tsx {4, 6, 22, 24}
 import { WagmiProvider } from 'wagmi'
 import { ronin, saigon } from 'viem/chains'
 import { createRoninModal } from '@roninbuilders/modal-wagmi'
@@ -92,7 +93,7 @@ export const config = createRoninModal({
   },
 })
 
-export default App(){
+export default function App(){
 	return (
 		<WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>

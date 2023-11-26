@@ -1,0 +1,12 @@
+{
+  "index": "Overview",
+  "modal": "Ronin Modal",
+  "web3modal": "Web3Modal Adapter",
+  "react": "React",
+  "core": "Core",
+  "github_link": {
+    "title": "GitHub Repository 🡥",
+    "href": "https://github.com/ronin-builders/w3vm",
+    "newWindow": true
+  }
+}

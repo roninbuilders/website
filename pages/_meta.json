@@ -1,6 +1,6 @@
 {
-  "modal": {
-    "title": "Ronin Modal",
+  "w3vm": {
+    "title": "W3Vm",
     "type": "page"
   },
   "wagmi": {
