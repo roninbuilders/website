@@ -10,6 +10,8 @@ export default {
       }}>Main</p>
     </>
   ),
+  darkMode: false,
+  nextThemes: {defaultTheme: 'dark'},
   project: {
     link: 'https://github.com/ronin-builders'
   },
