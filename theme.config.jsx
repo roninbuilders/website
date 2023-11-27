@@ -13,9 +13,9 @@ export default {
   darkMode: false,
   nextThemes: {defaultTheme: 'dark'},
   project: {
-    link: 'https://github.com/ronin-builders'
+    link: 'https://github.com/roninbuilders'
   },
-  docsRepositoryBase:"https://github.com/ronin-builders/website",
+  docsRepositoryBase:"https://github.com/roninbuilders/website",
   footer: {
     component: null
   },
