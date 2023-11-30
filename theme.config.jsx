@@ -31,7 +31,7 @@ export default {
       <meta property="og:image" content="/homepage-hero.png"/>
       <meta property="og:title" content="Ronin Builders" />
       <meta property="og:url" content="https://www.roninbuilders.dev/" />
-      <meta property="og:description" content="Typescript tools for the Ronin Network. Community driven organization." />
+      <meta property="og:description" content="Typescript tools for the Ronin Network." />
 
       <meta name="twitter:card" content="summary_large_image" />
     </>
