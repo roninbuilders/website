@@ -4,7 +4,7 @@
 		"build": "next build"
 	},
 	"dependencies": {
-		"@roninbuilders/modal": "^0.0.19",
+		"@roninbuilders/modal": "^0.0.20",
 		"next": "^13.5.4",
 		"nextjs-progressbar": "0.0.15",
 		"nextra": "^2.13.2",
