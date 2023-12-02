@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@roninbuilders/modal':
-    specifier: ^0.0.16
-    version: 0.0.16(react@18.2.0)(typescript@5.2.2)(vanilla-cafe@0.1.5)
+    specifier: ^0.0.17
+    version: 0.0.17(react@18.2.0)(typescript@5.2.2)(vanilla-cafe@0.1.5)
   next:
     specifier: ^13.5.4
     version: 13.5.6(react-dom@18.2.0)(react@18.2.0)
@@ -516,8 +516,8 @@ packages:
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
     dev: false
 
-  /@roninbuilders/modal@0.0.16(react@18.2.0)(typescript@5.2.2)(vanilla-cafe@0.1.5):
-    resolution: {integrity: sha512-rzNs0HFp3HzQl4PuiBQDhB4PaOFb6xoeENsne8lx6RtyNxUvPJbsQmFjkBD0y5Y+uFOgz32iWs1uB4T3init7g==}
+  /@roninbuilders/modal@0.0.17(react@18.2.0)(typescript@5.2.2)(vanilla-cafe@0.1.5):
+    resolution: {integrity: sha512-kIuiloFokjsjSvOUHNFL+GED6fSuGe7/SaMA5KtxoMiW21hVVQnotXWn7EtXJE5YFR/7TaV+T0OaaMblodaSPw==}
     peerDependencies:
       typescript: '>=5'
       vanilla-cafe: '>=0'
@@ -525,8 +525,8 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@w3vm/core': 0.0.3(typescript@5.2.2)
-      '@w3vm/walletconnect': 0.0.6(@w3vm/core@0.0.3)(react@18.2.0)(typescript@5.2.2)(vanilla-cafe@0.1.5)
+      '@w3vm/core': 0.0.4(typescript@5.2.2)
+      '@w3vm/walletconnect': 0.0.7(@w3vm/core@0.0.4)(react@18.2.0)(typescript@5.2.2)(vanilla-cafe@0.1.5)
       '@wehmoen/rnsts': 1.0.1
       lit: 2.8.0
       qrcode: 1.5.3
@@ -811,8 +811,8 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: false
 
-  /@w3vm/core@0.0.3(typescript@5.2.2):
-    resolution: {integrity: sha512-zkmCNNZKEdK7RLfLJR47QzmSrzbJm00A5mKjOiIVviLpVAn9wljlCYYuXbJEOYHFBsE52VtacyaMlz59N1XT6Q==}
+  /@w3vm/core@0.0.4(typescript@5.2.2):
+    resolution: {integrity: sha512-XevpwF23iULFxq4D66tV1l4Y77NcPTnYXwcZKJWZS2vSLrKqOK72vGfyeElUjnKx5x8VkCUs6ew19UxRmZhheg==}
     peerDependencies:
       typescript: '>=5'
     peerDependenciesMeta:
@@ -823,8 +823,8 @@ packages:
       vanilla-cafe: 0.1.5(typescript@5.2.2)
     dev: false
 
-  /@w3vm/walletconnect@0.0.6(@w3vm/core@0.0.3)(react@18.2.0)(typescript@5.2.2)(vanilla-cafe@0.1.5):
-    resolution: {integrity: sha512-hi3tuXu8JKS9TvxYJj8xoi1fkXnRGQB/U/eV4/H4Lo160KvT/Sih/Hu2fdvfG7rCm/gNaCjSHGj3byt21kKfVw==}
+  /@w3vm/walletconnect@0.0.7(@w3vm/core@0.0.4)(react@18.2.0)(typescript@5.2.2)(vanilla-cafe@0.1.5):
+    resolution: {integrity: sha512-urHHZk2vdxY2mrinSJGN3u/+QuUkKRvoAprwx3JuK/nw/z4ioPdUVxQaRa0Gsc6CgmIrBbEdeZhN0UaaYn/OTA==}
     peerDependencies:
       '@w3vm/core': '>=0'
       typescript: '>=5'
@@ -833,7 +833,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@w3vm/core': 0.0.3(typescript@5.2.2)
+      '@w3vm/core': 0.0.4(typescript@5.2.2)
       '@walletconnect/ethereum-provider': 2.10.6(react@18.2.0)
       '@walletconnect/modal': 2.6.2(react@18.2.0)
       typescript: 5.2.2
