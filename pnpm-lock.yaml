@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@roninbuilders/modal':
-    specifier: ^0.0.24
-    version: 0.0.24(react@18.2.0)(typescript@5.2.2)(vanilla-cafe@0.1.5)
+    specifier: ^0.0.25
+    version: 0.0.25(react@18.2.0)(typescript@5.2.2)(vanilla-cafe@0.1.5)
   next:
     specifier: ^13.5.4
     version: 13.5.6(react-dom@18.2.0)(react@18.2.0)
@@ -515,8 +515,8 @@ packages:
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
     dev: false
 
-  /@roninbuilders/modal-ui@0.0.2(typescript@5.2.2)(vanilla-cafe@0.1.5):
-    resolution: {integrity: sha512-nXPTxnB3IHttbnMc97oktONIgtMVyCtVJ1an68ciqLsUprw3CdOAmQ/5OQCe7/j9YMTqwbuW8uTOGYX1WrDTgg==}
+  /@roninbuilders/modal-ui@0.0.3(typescript@5.2.2)(vanilla-cafe@0.1.5):
+    resolution: {integrity: sha512-7ZNgROGXf8q4thE0ri8F63W8dEFNRxuHP2zea+oKKGCBpVSAcntRJuwDymRCS4bQtRdfQTx1J8hpJVNzc/hknQ==}
     peerDependencies:
       typescript: '>=5'
       vanilla-cafe: '>=0'
@@ -524,14 +524,15 @@ packages:
       typescript:
         optional: true
     dependencies:
+      blo: 1.1.1
       lit: 2.8.0
       qrcode: 1.5.3
       typescript: 5.2.2
       vanilla-cafe: 0.1.5(typescript@5.2.2)
     dev: false
 
-  /@roninbuilders/modal@0.0.24(react@18.2.0)(typescript@5.2.2)(vanilla-cafe@0.1.5):
-    resolution: {integrity: sha512-2c4PDexwEeJLkXAqfPWDevWFZT32YyPO7Zzktkdg5sHXr4yBJ3mBmXnosG0RMTsrHnCKTLlDPUq4SyjDyrHo+w==}
+  /@roninbuilders/modal@0.0.25(react@18.2.0)(typescript@5.2.2)(vanilla-cafe@0.1.5):
+    resolution: {integrity: sha512-TqxfS5M2DGRIHqavAJ5fBoggJ9Ki57K6FQ8Hw/Q8CKvNcPZHCRMd3GfwrJ5iw1lSI3sXO2XmWxk6Sbx2dzRwAg==}
     peerDependencies:
       typescript: '>=5'
       vanilla-cafe: '>=0'
@@ -539,7 +540,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@roninbuilders/modal-ui': 0.0.2(typescript@5.2.2)(vanilla-cafe@0.1.5)
+      '@roninbuilders/modal-ui': 0.0.3(typescript@5.2.2)(vanilla-cafe@0.1.5)
       '@w3vm/core': 0.0.4(typescript@5.2.2)
       '@w3vm/walletconnect': 0.0.7(@w3vm/core@0.0.4)(react@18.2.0)(typescript@5.2.2)(vanilla-cafe@0.1.5)
       '@wehmoen/rnsts': 1.0.1
@@ -1340,6 +1341,11 @@ packages:
   /binary-extensions@2.2.0:
     resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
     engines: {node: '>=8'}
+    dev: false
+
+  /blo@1.1.1:
+    resolution: {integrity: sha512-1uGZInlRD4X1WQP2G1QjDGwGZ8HdGgFKqnzyRdA2TYYc0MOQCmCi37RTQ8oJuI0UF6DYFKXHwV/t1kZkO/fTaA==}
+    engines: {node: '>=16'}
     dev: false
 
   /braces@3.0.2:
