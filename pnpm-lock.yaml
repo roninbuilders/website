@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@roninbuilders/modal':
-    specifier: ^0.0.27
-    version: 0.0.27(react@18.2.0)(typescript@5.2.2)(vanilla-cafe@0.1.5)
+    specifier: ^0.0.28
+    version: 0.0.28(react@18.2.0)(typescript@5.2.2)(vanilla-cafe@0.1.5)
   next:
     specifier: ^13.5.4
     version: 13.5.6(react-dom@18.2.0)(react@18.2.0)
@@ -515,8 +515,8 @@ packages:
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
     dev: false
 
-  /@roninbuilders/modal-ui@0.0.5(typescript@5.2.2)(vanilla-cafe@0.1.5):
-    resolution: {integrity: sha512-AGu+68Dr+J6Loe6nHPFJo3Ulc2FvSSuk5hlf3C+MCpxnDOsL4mdYRclGSXktmiH/e1LwN1dLjCDdDzWPhKLOsw==}
+  /@roninbuilders/modal-ui@0.0.6(typescript@5.2.2)(vanilla-cafe@0.1.5):
+    resolution: {integrity: sha512-pOFnpbuLNn5Dsn37vC0AUgprtJKfPwkBwbm2xfx/ZMs7zjirqTmhV1Oaim3gfcs1TlWCuFSLWwMFLHqBQrmh/w==}
     peerDependencies:
       typescript: '>=5'
       vanilla-cafe: '>=0'
@@ -524,7 +524,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@roninbuilders/rns': 0.0.2(typescript@5.2.2)
+      '@roninbuilders/rns': 0.0.11(typescript@5.2.2)
       blo: 1.1.1
       lit: 2.8.0
       qrcode: 1.5.3
@@ -532,8 +532,8 @@ packages:
       vanilla-cafe: 0.1.5(typescript@5.2.2)
     dev: false
 
-  /@roninbuilders/modal@0.0.27(react@18.2.0)(typescript@5.2.2)(vanilla-cafe@0.1.5):
-    resolution: {integrity: sha512-RPNmb8jEEEsF4anmUCQkc1NtmBp7Zvy/Pv8bUjlaBKgs2FKTXC6NhMBfBEvVFdRwNJbLVR3ZmMBJZhLsksICXQ==}
+  /@roninbuilders/modal@0.0.28(react@18.2.0)(typescript@5.2.2)(vanilla-cafe@0.1.5):
+    resolution: {integrity: sha512-j6j+sPNlgnt+BXQW6W7jgns7rcPFrOxA0D2/rsdF3K0TRc75V+zgCn7MdEXUkGSZ0e/fyk0FZBnTrRRKJgs95w==}
     peerDependencies:
       typescript: '>=5'
       vanilla-cafe: '>=0'
@@ -541,7 +541,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@roninbuilders/modal-ui': 0.0.5(typescript@5.2.2)(vanilla-cafe@0.1.5)
+      '@roninbuilders/modal-ui': 0.0.6(typescript@5.2.2)(vanilla-cafe@0.1.5)
       '@w3vm/core': 0.0.4(typescript@5.2.2)
       '@w3vm/walletconnect': 0.0.7(@w3vm/core@0.0.4)(react@18.2.0)(typescript@5.2.2)(vanilla-cafe@0.1.5)
       '@wehmoen/rnsts': 1.0.1
@@ -569,8 +569,8 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@roninbuilders/rns@0.0.2(typescript@5.2.2):
-    resolution: {integrity: sha512-929hMyHjYIknTquq5VDyJPmrvZ3L3AymbyKcrFFQ1LJMCB/gfEQzT2jNmW36lQDoD4kGOowiMo0BRyRZkpTMTA==}
+  /@roninbuilders/rns@0.0.11(typescript@5.2.2):
+    resolution: {integrity: sha512-is+UXgNx/GrnlbeOiyvztR3/omy2MeMMkzBJUyQOFRX0jrbbTK7ZzJ4dRPV01DMpPFOkF8yXHcWXm6Co1VAdrg==}
     peerDependencies:
       typescript: '>=5'
     peerDependenciesMeta:
