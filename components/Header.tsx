@@ -10,7 +10,9 @@ const Header = () => {
         <p className={s.title} >onin Builders</p>
       </span>
       <p className={s.description} >Building Typescript tools for the Ronin Network.</p>
-      <Button label='Getting Started' target='/w3vm/modal' />
+      <div style={{ display: 'flex', gap: '10px' }} >
+      <Button arrow label='Getting Started' target='/modal' />
+      </div>
     </div>
   )
 }

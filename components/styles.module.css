@@ -19,6 +19,10 @@
   transition: all .2s ease;
 }
 
+.secondary{
+  background: linear-gradient(256.28deg, #5d6063 , #3a3e43 );
+}
+
 .button svg{
   margin-top: 2px;
   padding-left: 0;
@@ -29,6 +33,6 @@
   background: linear-gradient(256.28deg,#1273ea,#1c94f4);
 }
 
-.button:hover svg{
-  margin-left: 3px;
+.secondary:hover{
+  background: linear-gradient(256.28deg, #3a3e43 , #5d6063 );
 }

@@ -1,10 +1,14 @@
 {
-  "w3vm": {
-    "title": "W3Vm",
+  "modal": {
+    "title": "Ronin Modal",
     "type": "page"
   },
-  "wagmi": {
-    "title": "Wagmi",
+  "connectors":{
+    "title": "Connectors",
+    "type": "page"
+  },
+  "tools": {
+    "title": "Tools & Helpers",
     "type": "page"
   },
   "index": {
