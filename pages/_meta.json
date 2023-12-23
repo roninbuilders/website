@@ -15,5 +15,11 @@
     "title": "Introduction",
     "type": "page",
     "display": "hidden"
+  },
+  "contact": {
+    "title": "Join Us",
+    "type": "page",
+    "href": "https://discord.gg/qxrr6KJj",
+    "newWindow": true
   }
 }
