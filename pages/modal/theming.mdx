@@ -1,0 +1,82 @@
+import { Callout } from 'nextra/components'
+
+# Theming
+
+By default Ronin Modal uses light mode, you can use the `darkMode` flag to change the theme:
+
+```ts {6}
+import { saigon, createRoninModal } from "@roninbuilders/modal"
+
+createRoninModal({
+	chain: saigon,
+	projectId: "YOUR_WALLETCONNECT_PROJECT_ID",
+  darkMode: true
+})
+```
+
+# Custom Theming
+
+If you would like to customize the modal more you can use different CSS properties:
+
+<Callout type="info">
+ By default Font Family is inherited but it can also be overridden.
+</Callout>
+
+## CSS properties of `<ronin-button>`:
+
+|	CSS Property |	Default	|
+| :----- | ----: |
+|	--rm-connect-btn-width	|	134px	|
+|	--rm-connect-btn-font-family	|	inherit	|
+| --rm-connect-btn-font-size | 0.95rem |
+| --rm-connect-btn-font-weight | 500 |
+| --rm-connect-btn-border-radius | 0.4rem |
+| --rm-connect-btn-padding | 11px 13px |
+| --rm-connect-btn-bg-color | #0d6efd |
+| --rm-connect-btn-bg-color-hover | #0d6efde6 |
+| --rm-title-color | #fff |
+
+## CSS properties of `<ronin-modal>`:
+
+### Global
+
+| CSS Property |	Default (light mode)	| Default (dark mode) |
+| :----- | :----: | ----: |
+| --rm-global-font-family | inherit | - |
+| --rm-global-font-size | 20px | - |
+| --rm-global-font-weight | 500 | - |
+| --rm-global-border-radius | 14px | - |
+| --rm-global--bg-color | #fff | #1a1c23 |
+| --rm-global-color | #000 | #fff |
+
+### Titles
+
+| CSS Property |	Default (light mode)	| Default (dark mode) |
+| :----- | :----: | ----: |
+| --rm-title-font-size | 20px | - |
+| --rm-title-font-weight | 500 | - |
+| --rm-title-color | #000 | #fff |
+
+### Primary Buttons
+
+|	CSS Property |	Default (light mode)	| Default (dark mode) |
+| :----- | :----: | ----: |
+| --rm-main-btn-font-size, 1.1rem | - |
+| --rm-main-btn-font-weight, 500 | - |
+| --rm-main-btn-border-radius, 0.4rem | - |
+| --rm-main-btn-bg-color | #F6F7F9 | transparent |
+| --rm-main-btn-bg-color-hover | #eceef1 | #21232c |
+| --rm-main-btn-color | #000 | #fff |
+
+
+### Secondary Buttons
+
+| CSS Property |	Default (light mode)	| Default (dark mode) |
+| :----- | :----: | ----: |
+| --rm-secondary-btn-font-size, 17px | - |
+| --rm-secondary-btn-font-weight, 500 | - |
+| --rm-secondary-btn-border-radius, 10px | - |
+| --rm-secondary-btn-height | 30px | - |
+| --rm-secondary-btn-bg-color | #F6F7F9 | #282a39 |
+| --rm-secondary-btn-bg-color-hover | #eceef1 | #2d3142 |
+| --rm-secondary-btn-color | #000 | #fff |
