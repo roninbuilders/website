@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@roninbuilders/modal':
-    specifier: ^0.0.34
-    version: 0.0.34(react@18.2.0)(typescript@5.2.2)(vanilla-cafe@0.1.5)
+    specifier: ^0.0.35
+    version: 0.0.35(react@18.2.0)(typescript@5.2.2)(vanilla-cafe@0.1.5)
   next:
     specifier: ^13.5.4
     version: 13.5.6(react-dom@18.2.0)(react@18.2.0)
@@ -515,8 +515,8 @@ packages:
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
     dev: false
 
-  /@roninbuilders/modal-ui@0.0.12(typescript@5.2.2)(vanilla-cafe@0.1.5):
-    resolution: {integrity: sha512-q7mvpcN3nJKwogUOkboB5Wipz/D844kuPh+/oBiVQK+6s7Coakd/uh0iJxt819Su5xgGno/7jgvJIhx8gi+31Q==}
+  /@roninbuilders/modal-ui@0.0.13(typescript@5.2.2)(vanilla-cafe@0.1.5):
+    resolution: {integrity: sha512-b/R+sPQkxdrB1qc4eFnNsO7D+n1rSAS5b27IGvAXdfFoWmplJiJmELqF65ecd8uYTLJo6cT61X1Awvh+oO1BLQ==}
     peerDependencies:
       typescript: '>=5'
       vanilla-cafe: '>=0'
@@ -532,8 +532,8 @@ packages:
       vanilla-cafe: 0.1.5(typescript@5.2.2)
     dev: false
 
-  /@roninbuilders/modal@0.0.34(react@18.2.0)(typescript@5.2.2)(vanilla-cafe@0.1.5):
-    resolution: {integrity: sha512-YGY0MfFtTDrEarf/hueHsu7N9PsMifXXyXlrKs0q45sIzQR2hVyhrJJJymn6Wzepk1BvI86PK9bTRdT/rqINTw==}
+  /@roninbuilders/modal@0.0.35(react@18.2.0)(typescript@5.2.2)(vanilla-cafe@0.1.5):
+    resolution: {integrity: sha512-yRvXrGDz4smvIFig9A1vfUpGSUWnp6peVei+FWmlfCI10NZwLUQyABT4vy5RMCwjX3zxyMI1nLw8XrmudDvdWw==}
     peerDependencies:
       typescript: '>=5'
       vanilla-cafe: '>=0'
@@ -541,7 +541,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@roninbuilders/modal-ui': 0.0.12(typescript@5.2.2)(vanilla-cafe@0.1.5)
+      '@roninbuilders/modal-ui': 0.0.13(typescript@5.2.2)(vanilla-cafe@0.1.5)
       '@w3vm/core': 0.0.4(typescript@5.2.2)
       '@w3vm/walletconnect': 0.0.7(@w3vm/core@0.0.4)(react@18.2.0)(typescript@5.2.2)(vanilla-cafe@0.1.5)
       typescript: 5.2.2
