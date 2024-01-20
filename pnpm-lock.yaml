@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@roninbuilders/modal':
-    specifier: ^0.0.35
-    version: 0.0.35(react@18.2.0)(typescript@5.2.2)(vanilla-cafe@0.1.5)
+    specifier: ^0.0.36
+    version: 0.0.36(react@18.2.0)(typescript@5.2.2)(vanilla-cafe@0.1.5)
   next:
     specifier: ^13.5.4
     version: 13.5.6(react-dom@18.2.0)(react@18.2.0)
@@ -164,6 +164,7 @@ packages:
 
   /@motionone/vue@10.16.4:
     resolution: {integrity: sha512-z10PF9JV6SbjFq+/rYabM+8CVlMokgl8RFGvieSGNTmrkQanfHn+15XBrhG3BgUfvmTeSeyShfOHpG0i9zEdcg==}
+    deprecated: Motion One for Vue is deprecated. Use Oku Motion instead https://oku-ui.com/motion
     dependencies:
       '@motionone/dom': 10.16.4
       tslib: 2.6.2
@@ -515,8 +516,8 @@ packages:
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
     dev: false
 
-  /@roninbuilders/modal-ui@0.0.13(typescript@5.2.2)(vanilla-cafe@0.1.5):
-    resolution: {integrity: sha512-b/R+sPQkxdrB1qc4eFnNsO7D+n1rSAS5b27IGvAXdfFoWmplJiJmELqF65ecd8uYTLJo6cT61X1Awvh+oO1BLQ==}
+  /@roninbuilders/modal-ui@0.1.0(typescript@5.2.2)(vanilla-cafe@0.1.5):
+    resolution: {integrity: sha512-zhise42EevUWplO3K0Xfp/j7TQwSsIF6HBRUJSD/EiJd5mxtFpdeJqsE6evR0ac+arMIvYmTANeyLncI0Q3pMg==}
     peerDependencies:
       typescript: '>=5'
       vanilla-cafe: '>=0'
@@ -532,8 +533,8 @@ packages:
       vanilla-cafe: 0.1.5(typescript@5.2.2)
     dev: false
 
-  /@roninbuilders/modal@0.0.35(react@18.2.0)(typescript@5.2.2)(vanilla-cafe@0.1.5):
-    resolution: {integrity: sha512-yRvXrGDz4smvIFig9A1vfUpGSUWnp6peVei+FWmlfCI10NZwLUQyABT4vy5RMCwjX3zxyMI1nLw8XrmudDvdWw==}
+  /@roninbuilders/modal@0.0.36(react@18.2.0)(typescript@5.2.2)(vanilla-cafe@0.1.5):
+    resolution: {integrity: sha512-/SqcjoOewgofI1ZANpcnzEXVuufJm+JCYPvzI3d/KR8OH1KQSkJEI4YOYlg7kLCe3IzYILMln1cfnN1WtmlflQ==}
     peerDependencies:
       typescript: '>=5'
       vanilla-cafe: '>=0'
@@ -541,7 +542,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@roninbuilders/modal-ui': 0.0.13(typescript@5.2.2)(vanilla-cafe@0.1.5)
+      '@roninbuilders/modal-ui': 0.1.0(typescript@5.2.2)(vanilla-cafe@0.1.5)
       '@w3vm/core': 0.0.4(typescript@5.2.2)
       '@w3vm/walletconnect': 0.0.7(@w3vm/core@0.0.4)(react@18.2.0)(typescript@5.2.2)(vanilla-cafe@0.1.5)
       typescript: 5.2.2
