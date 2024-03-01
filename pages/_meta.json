@@ -3,10 +3,6 @@
     "title": "Ronin Modal",
     "type": "page"
   },
-  "connectors":{
-    "title": "Connectors",
-    "type": "page"
-  },
   "tools": {
     "title": "Tools & Helpers",
     "type": "page"
