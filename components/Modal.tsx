@@ -1,4 +1,5 @@
 import { saigon, createRoninModal } from "@roninbuilders/modal"
+import "@roninbuilders/modal-ui"
 
 createRoninModal({
 	chain: saigon,
@@ -11,5 +12,6 @@ createRoninModal({
 })
 
 export default function Modal() {
+	//@ts-ignore
   return <ronin-button/>
 }
