@@ -31,7 +31,9 @@ import { ronin, saigon } from 'viem/chains'
 
 2. Get a free project ID from [WalletConnect Cloud](https://cloud.walletconnect.com/). This is used for mobile connection.
 
-3. Call the `createRoninModal` function on top of your application.
+3. Get a ClientId for Ronin Waypoint: [Ronin Guide](https://docs.skymavis.com/mavis/ronin-waypoint/guides/get-started#steps)
+
+4. Call the `createRoninModal` function on top of your application.
 
 ```tsx {2-13}
 import { ronin, saigon } from 'viem/chains'
@@ -40,6 +42,9 @@ import { createRoninModal } from '@roninbuilders/modal-wagmi'
 const config = createRoninModal({
   projectId:"WALLETCONNECT_PROJECT_ID",
   chain: saigon,
+  	waypoint:{
+		clientId: "RONIN_CLIENT_ID"
+	},
   metadata: { 
     name: 'My Website', 
     description: 'My website description', 
@@ -59,6 +64,9 @@ import { createRoninModal } from '@roninbuilders/modal-wagmi'
 const config = createRoninModal({
   projectId:"WALLETCONNECT_PROJECT_ID",
   chain: saigon,
+  	waypoint:{
+		clientId: "RONIN_CLIENT_ID"
+	},
   metadata: { 
     name: 'My Website', 
     description: 'My Website Description', 
@@ -89,6 +97,9 @@ const queryClient = new QueryClient()
 export const config = createRoninModal({
   projectId:"WALLETCONNECT_PROJECT_ID",
   chain: saigon,
+  	waypoint:{
+		clientId: "RONIN_CLIENT_ID"
+	},
   metadata: { 
     name: 'Example', 
     description: 'Example website', 
@@ -116,3 +127,14 @@ and its CSS style can be overwritten.
 ```
 
 All Wagmi hooks and functions are supported. Learn more about Wagmi v2 [here](https://beta.wagmi.sh/react/api/hooks).
+
+### React 19
+
+```tsx {8-10}
+import { RoninButton } from '@roninbuilders/modal/react'
+
+
+export default function App(){
+  return <RoninButton/>
+}
+```

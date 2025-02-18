@@ -4,12 +4,8 @@ import { Callout } from 'nextra/components'
 # Ronin Modal
 
 <Callout type="info" emoji="ℹ️">
-  This guide explains how you can use Ronin Modal with W3Vm library, if you'd like to use Wagmi v2 instead visit [here](../wagmi/modal).
+  This guide explains how you can use Ronin Modal with W3Vm library, which supports Ethers.js, Viem and other web3 libraries.
 </Callout>
-
-Ronin Modal is a framework agnostic UI library that simplifies the integration of the Ronin Wallet connection with websites.
-
-Ronin Modal supports W3Vm and [Wagmi v2](../wagmi/modal).
 
 **Test on Saigon:**
 <br/>
@@ -31,7 +27,9 @@ import { ronin, saigon, createRoninModal } from '@roninbuilders/modal'
 
 2. Get a free project ID from [WalletConnect Cloud](https://cloud.walletconnect.com/). This is used for mobile connection.
 
-3. Call the `createRoninModal` function on top of your application.
+3. Get a ClientId for Ronin Waypoint: [Ronin Guide](https://docs.skymavis.com/mavis/ronin-waypoint/guides/get-started#steps)
+
+4. Call the `createRoninModal` function on top of your application.
 
 ```ts {3-6}
 import { ronin, saigon, createRoninModal } from '@roninbuilders/modal'
@@ -39,6 +37,9 @@ import { ronin, saigon, createRoninModal } from '@roninbuilders/modal'
 createRoninModal({
 	chain: saigon,
 	projectId: 'WALLETCONNECT_PROJECT_ID',
+	waypoint:{
+		clientId: "RONIN_CLIENT_ID"
+	}
 })
 ```
 
@@ -51,6 +52,9 @@ import { ronin, saigon, createRoninModal } from '@roninbuilders/modal'
 createRoninModal({
 	chain: saigon,
 	projectId: 'WALLETCONNECT_PROJECT_ID',
+	waypoint:{
+		clientId: "RONIN_CLIENT_ID"
+	}
 })
 
 export default function App(){
@@ -67,6 +71,9 @@ import { getW3Address, getW3Provider } from '@w3vm/react'
 createRoninModal({
 	chain: saigon,
 	projectId: 'WALLETCONNECT_PROJECT_ID',
+	waypoint:{
+		clientId: "RONIN_CLIENT_ID"
+	}
 })
 
 export default function App() {
@@ -80,6 +87,17 @@ export default function App() {
 ```
 
 You can wrap the provider with any ethereum library such as [Ethers](https://docs.ethers.org/v6/), [Viem](https://viem.sh/) or [Web3js](https://web3js.org/).
+
+### React 19
+
+```tsx {8-10}
+import { RoninButton } from '@roninbuilders/modal/react'
+
+
+export default function App(){
+  return <RoninButton/>
+}
+```
 
 ### Server Side Rendering
 
@@ -96,6 +114,9 @@ import { W3 } from '@w3vm/react'
 const w3props = createRoninModal({
 	chain: saigon,
 	projectId: 'WALLETCONNECT_PROJECT_ID',
+	waypoint:{
+		clientId: "RONIN_CLIENT_ID"
+	}
 	SSR: true,
 })
 

@@ -1,6 +1,20 @@
+import { Cards } from 'nextra/components'
+import ArrowIcon from '../../public/ethers.png'
+import WagmiIcon from '../../public/wagmi.svg'
+
 # Ronin Modal
 
 Ronin Modal supports Wagmi v2 as well as other ethereum libraries like ethers, web3js or Viem.
 
-- [Integrate Ronin Modal with Wagmi v2.](./modal/wagmi)
-- [Integrate Ronin Modal with Ethers, Web3js or Viem.](./modal/w3vm)
+<Cards>
+  <Cards.Card
+    icon={<img src={WagmiIcon} height={40} width={40} />}
+    title="Integrate with Wagmi."
+    href="/modal/wagmi"
+  />
+  <Cards.Card
+    icon={<img src={ArrowIcon} height={40} width={40} />}
+    title="Integrate with Ethers."
+    href="/modal/w3vm"
+  />
+</Cards>
