@@ -6,7 +6,7 @@ createRoninModal({
 	projectId: "cdbd18f9f96172be74c3e351ce99b908",
 	darkMode: true,
 	waypoint:{
-		clientId: "0e188f93-b419-4b0f-8df4-0f976da91ee6"
+		clientId: "9999ea8e-61eb-431d-a328-43942ea1b154"
 	}
 })
 
