@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@roninbuilders/modal':
-        specifier: ^0.2.7
-        version: 0.2.7(@roninbuilders/siwe@0.0.3(typescript@5.2.2)(vanilla-cafe@0.1.5(typescript@5.2.2))(zod@3.24.1))(@types/react@19.0.8)(react@18.3.1)(typescript@5.2.2)(vanilla-cafe@0.1.5(typescript@5.2.2))(zod@3.24.1)
+        specifier: ^0.2.8
+        version: 0.2.8(@roninbuilders/siwe@0.0.3(typescript@5.2.2)(vanilla-cafe@0.1.5(typescript@5.2.2))(zod@3.24.1))(@types/react@19.0.8)(react@18.3.1)(typescript@5.2.2)(vanilla-cafe@0.1.5(typescript@5.2.2))(zod@3.24.1)
       next:
         specifier: ^13.5.4
         version: 13.5.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -298,8 +298,8 @@ packages:
   '@popperjs/core@2.11.8':
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
 
-  '@roninbuilders/modal-ui@0.2.5':
-    resolution: {integrity: sha512-KpDmUU3DXrEEbtFtMq/TKy/zbRb7kfsZsk7yyJKsxhtxE2HkfxahEPpVCTbnsxt092Swo3mCDQJxONE0y2p1/A==}
+  '@roninbuilders/modal-ui@0.2.6':
+    resolution: {integrity: sha512-/ztOWnYcaC2AFm1I3d4kEGS9Q1oknFeHJcBlP68TrILn/qPqYVXkEy+FlGbjsf4FoTdyYm3xljc8FH4AkWPx5g==}
     peerDependencies:
       typescript: '>=5'
       vanilla-cafe: '>=0'
@@ -307,8 +307,8 @@ packages:
       typescript:
         optional: true
 
-  '@roninbuilders/modal@0.2.7':
-    resolution: {integrity: sha512-LKfmrvtdY6isD0IyXBQDcS1qhnT080W4g4UC/avN6n2mnjLN/T/uqRjzaQrH5f+Jjh/2Syhaznn7fYfn5gKFWQ==}
+  '@roninbuilders/modal@0.2.8':
+    resolution: {integrity: sha512-tQlq2uB4inTXfP99jaNNCztFCYpYIop6coRSHzyWF+Ff5Lf5JVsXpVIxNHRfsh5Tt33eTGubqC1KkgTxLuusqw==}
     peerDependencies:
       '@roninbuilders/siwe': '>=0'
       react: '>=16'
@@ -1274,6 +1274,7 @@ packages:
 
   lodash.isequal@4.5.0:
     resolution: {integrity: sha512-pDo3lu8Jhfjqls6GkMgpahsF9kCyayhgykjyLMNFTKWrpVdAQtYyB4muAMWozBB4ig/dtWAmsMxLEI8wuz+DYQ==}
+    deprecated: This package is deprecated. Use require('node:util').isDeepStrictEqual instead.
 
   lodash@4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
@@ -2519,7 +2520,7 @@ snapshots:
 
   '@popperjs/core@2.11.8': {}
 
-  '@roninbuilders/modal-ui@0.2.5(typescript@5.2.2)(vanilla-cafe@0.1.5(typescript@5.2.2))(zod@3.24.1)':
+  '@roninbuilders/modal-ui@0.2.6(typescript@5.2.2)(vanilla-cafe@0.1.5(typescript@5.2.2))(zod@3.24.1)':
     dependencies:
       '@roninbuilders/rns': 0.0.11(typescript@5.2.2)
       '@roninbuilders/siwe': 0.0.3(typescript@5.2.2)(vanilla-cafe@0.1.5(typescript@5.2.2))(zod@3.24.1)
@@ -2534,10 +2535,10 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@roninbuilders/modal@0.2.7(@roninbuilders/siwe@0.0.3(typescript@5.2.2)(vanilla-cafe@0.1.5(typescript@5.2.2))(zod@3.24.1))(@types/react@19.0.8)(react@18.3.1)(typescript@5.2.2)(vanilla-cafe@0.1.5(typescript@5.2.2))(zod@3.24.1)':
+  '@roninbuilders/modal@0.2.8(@roninbuilders/siwe@0.0.3(typescript@5.2.2)(vanilla-cafe@0.1.5(typescript@5.2.2))(zod@3.24.1))(@types/react@19.0.8)(react@18.3.1)(typescript@5.2.2)(vanilla-cafe@0.1.5(typescript@5.2.2))(zod@3.24.1)':
     dependencies:
       '@lit/react': 1.0.7(@types/react@19.0.8)
-      '@roninbuilders/modal-ui': 0.2.5(typescript@5.2.2)(vanilla-cafe@0.1.5(typescript@5.2.2))(zod@3.24.1)
+      '@roninbuilders/modal-ui': 0.2.6(typescript@5.2.2)(vanilla-cafe@0.1.5(typescript@5.2.2))(zod@3.24.1)
       '@sky-mavis/waypoint': 4.1.0
       '@w3vm/core': 0.0.4(typescript@5.2.2)
       '@w3vm/walletconnect': 0.0.9(@types/react@19.0.8)(@w3vm/core@0.0.4(typescript@5.2.2))(react@18.3.1)(typescript@5.2.2)(vanilla-cafe@0.1.5(typescript@5.2.2))
