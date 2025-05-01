@@ -90,12 +90,29 @@ You can wrap the provider with any ethereum library such as [Ethers](https://doc
 
 ### React 19
 
-```tsx {8-10}
+```tsx
 import { RoninButton } from '@roninbuilders/modal/react'
 
 
 export default function App(){
   return <RoninButton/>
+}
+```
+
+### useRNS Hook (React)
+
+The `useRNS` hook returns a value of type _string_ of the connected user's RNS or _undefined_ if the user is not connected ro does not own an RNS.
+
+```tsx
+import { useRNS } from '@roninbuilders/modal/react'
+
+
+export default function App(){
+
+	const connectedRNS = useRNS()
+
+	//...
+
 }
 ```
 

@@ -130,11 +130,28 @@ All Wagmi hooks and functions are supported. Learn more about Wagmi v2 [here](ht
 
 ### React 19
 
-```tsx {8-10}
+```tsx
 import { RoninButton } from '@roninbuilders/modal-wagmi/react'
 
 
 export default function App(){
   return <RoninButton/>
+}
+```
+
+### useRNS Hook (React)
+
+The `useRNS` hook returns a value of type _string_ of the connected user's RNS or _undefined_ if the user is not connected ro does not own an RNS.
+
+```tsx
+import { useRNS } from '@roninbuilders/modal-wagmi/react'
+
+
+export default function App(){
+
+	const connectedRNS = useRNS()
+
+	//...
+
 }
 ```
