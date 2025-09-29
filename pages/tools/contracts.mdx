@@ -1,87 +1,132 @@
 # Ronin contracts addresses and ABI's
 
-This is a community list of contracts addresses and abi's that might be useful for developers. Let us know if something is not up to date or missing.
+> ⚠️ **Security Disclaimer**: Always verify contract addresses before interacting with them on mainnet. This library provides community-maintained contract data based on the ronin explorer api data. Users are responsible for validating contract addresses and understanding the risks of blockchain interactions.
 
 ## Install
 
 ```sh npm2yarn
-npm i --save-exact @roninbuilders/contracts
+npm install --save-exact @roninbuilders/contracts
 ```
 
-### Usage viem
+### Import Individual Contracts
+
+The recommended approach to minimize bundle size:
+
+```typescript
+import WRAPPED_ETHER from '@roninbuilders/contracts/wrapped_ether';
+import USD_COIN from '@roninbuilders/contracts/usd_coin';
+import AXIE_PROXY from '@roninbuilders/contracts/axie_proxy';
+```
+
+### Usage with Viem
 
 ```sh npm2yarn
-npm i viem
+npm install --save-exact viem
 ```
 
 ```typescript
-import { formatEther } from "viem";
-import { AXIE, USDC,WETH } from "@roninbuilders/contracts"
+import { createPublicClient, http, formatEther, formatUnits } from 'viem';
+import WRAPPED_ETHER from '@roninbuilders/contracts/wrapped_ether';
+import USD_COIN from '@roninbuilders/contracts/usd_coin';
+import AXIE_PROXY from '@roninbuilders/contracts/axie_proxy';
 
-// get RON balance
-const ronBalance = await viemClient.getBalance({
+// Create Ronin client
+const client = createPublicClient({
+    chain: {
+        id: 2020,
+        name: 'Ronin',
+        network: 'ronin',
+        nativeCurrency: { 
+            decimals: 18, 
+            name: 'Ronin', 
+            symbol: 'RON' 
+        },
+        rpcUrls: {
+            default: { http: ['https://api.roninchain.com/rpc'] },
+            public: { http: ['https://api.roninchain.com/rpc'] },
+        },
+    },
+    transport: http(),
+});
+
+// Get RON balance
+const ronBalance = await client.getBalance({
     address,
 });
 console.log(`RON: ${formatEther(ronBalance)}`);
 
-// get WETH balance
-const wethBalance = await viemClient.readContract({
-    address: WETH.address,
-    abi: WETH.abi,
+// Get WETH balance
+const wethBalance = await client.readContract({
+    address: WRAPPED_ETHER.address,
+    abi: WRAPPED_ETHER.abi,
     functionName: 'balanceOf',
     args: [address]
-}) as bigint
-console.log(`WETH: ${formatEther(wethBalance)}`)
+}) as bigint;
+console.log(`WETH: ${formatEther(wethBalance)}`);
 
-// get axies balance 
-const axiesBalance = await viemClient.readContract({
-    address: AXIE.address,
-    abi: AXIE.abi,
+// Get Axies balance 
+const axiesBalance = await client.readContract({
+    address: AXIE_PROXY.address,
+    abi: AXIE_PROXY.proxy_abi,
     functionName: 'balanceOf',
     args: [address]
-}) as bigint
-console.log(`Axies: ${axiesBalance.toString()}`)
+}) as bigint;
+console.log(`Axies: ${axiesBalance.toString()}`);
 
-// get USDC balance
-const usdcBalance = await viemClient.readContract({
-    address: USDC.address,
-    abi: USDC.abi,
+// Get USDC balance with proper decimals
+const usdcBalance = await client.readContract({
+    address: USD_COIN.address,
+    abi: USD_COIN.abi,
     functionName: 'balanceOf',
     args: [address]
-}) as bigint
-console.log(`USDC balance: ${formatEther(usdcBalance)}`)
-
+}) as bigint;
+console.log(`USDC balance: ${formatUnits(usdcBalance, 6)}`); // USDC has 6 decimals
 ```
 
-### Usage ethers
+### Usage with Ethers
 
 ```sh npm2yarn
-npm i ethers@6.9.0
+npm install --save-exact ethers
 ```
 
 ```typescript
-import { AXIE, USDC, WETH } from "@roninbuilders/contracts"
+import { ethers, formatEther, formatUnits, Contract } from 'ethers';
+import WRAPPED_ETHER from '@roninbuilders/contracts/wrapped_ether';
+import USD_COIN from '@roninbuilders/contracts/usd_coin';
+import AXIE_PROXY from '@roninbuilders/contracts/axie_proxy';
 
-// get RON balance
-const balance = await hre.ethers.provider.getBalance(address)
-const balanceInEther = hre.ethers.formatEther(balance)
-console.log(`RON: ${balanceInEther}`)
+// Create provider
+const provider = new ethers.JsonRpcProvider('https://api.roninchain.com/rpc');
 
-// get WETH balance
-const wethContract = new hre.ethers.Contract(WETH.address, WETH.abi, hre.ethers.provider)
-const wethBalance = await wethContract.balanceOf(address)
-const wethBalanceInEther = hre.ethers.formatEther(wethBalance)
-console.log(`WETH: ${wethBalanceInEther}`)
+// Get RON balance
+const balance = await provider.getBalance(address);
+const balanceInEther = formatEther(balance);
+console.log(`RON: ${balanceInEther}`);
 
-// get axies balance 
-const axieContract = new hre.ethers.Contract(AXIE.address, AXIE.abi, hre.ethers.provider)
-const axiesBalance = await axieContract.balanceOf(address)
-console.log(`Axies: ${axiesBalance.toString()}`)
+// Get WETH balance
+const wethContract = new Contract(WRAPPED_ETHER.address, WRAPPED_ETHER.abi, provider);
+const wethBalance = await wethContract.balanceOf(address);
+const wethBalanceInEther = formatEther(wethBalance);
+console.log(`WETH: ${wethBalanceInEther}`);
 
-// get USDC balance
-const usdcContract = new hre.ethers.Contract(USDC.address, USDC.abi, hre.ethers.provider)
-const usdcBalance = await usdcContract.balanceOf(address)
-const usdcBalanceFormated = hre.ethers.formatUnits(usdcBalance, 6) // 6 decimals
-console.log(`USDC balance: ${usdcBalanceFormated}`)
+// Get Axies balance 
+const axieContract = new Contract(AXIE_PROXY.address, AXIE_PROXY.proxy_abi, provider);
+const axiesBalance = await axieContract.balanceOf(address);
+console.log(`Axies: ${axiesBalance.toString()}`);
 
+// Get USDC balance with proper decimals
+const usdcContract = new Contract(USD_COIN.address, USD_COIN.abi, provider);
+const usdcBalance = await usdcContract.balanceOf(address);
+const usdcDecimals = await usdcContract.decimals();
+const usdcBalanceFormatted = formatUnits(usdcBalance, usdcDecimals);
+console.log(`USDC balance: ${usdcBalanceFormatted}`);
 ```
+
+### Contract Structure
+
+Each contract export includes:
+- **address**: Contract address on Ronin Network
+- **abi**: Contract ABI for function calls
+- **proxy_abi**: Proxy ABI (for proxy contracts like Axie)
+- **metadata**: Contract information (name, creation date, deprecation status)
+
